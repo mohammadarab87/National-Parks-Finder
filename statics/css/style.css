@@ -1,0 +1,63 @@
+ html {
+  height: 100%;
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  /* overflow: hidden; */
+}
+
+#bannerimage {
+  width: 100%;
+  background-image: url(https://cdn.wallpapersafari.com/78/82/F0GIVJ.jpg);
+  height: 600px;
+  /* background-color: purple; */
+  background-position: top;
+  position: relative;
+}
+
+body {
+  background-image: url("https://images.news18.com/ibnlive/uploads/2016/06/AorakiMaps-tolkein.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+.jumbotron {
+  position: absolute;
+  /* background-size: 100% 100%; */
+  background-size: cover;
+  background: contain;
+  overflow: auto;
+  border-color: green;
+  border-width: 600px;
+  top: 7%;
+  left: 10%; 
+  width: 100%;
+  height: 300px;
+  max-width: 1200px;
+  /* margin: 0; */
+  /* padding: 0;  */
+ } 
+
+ .well {
+  width: 400px;
+} 
+
+.panel {
+  width: 400px;
+} 
+
+#map {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.legend {
+  position: absolute;
+  bottom: 10px;
+  right: 5px;
+  background-color: white;
+  padding: 10px;
+  border: 5px solid #ddd;
+  font-size: 9.5px;
+}

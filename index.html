@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Parkfinder</title>
+
+    <!-- Leaflet CSS-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+     integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+     crossorigin=""/>
+
+     <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    
+    <!-- Leaflet JavaScript code -->
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+     integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+     crossorigin=""></script>
+    
+    <!-- Our CSS -->
+    <link rel="stylesheet" type="text/css" href="statics/css/style.css"> 
+
+    <script src="https://cdn.plot.ly/plotly-2.20.0.min.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    
+      <!-- For the map -->
+      <!-- additional JS library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <!-- Marker cluster JavaScript code -->
+    <script type="text/javascript" src="https://unpkg.com/leaflet.markercluster@1.0.3/dist/leaflet.markercluster.js"></script>
+    <!-- Marker cluster CSS -->
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.css">
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.Default.css">
+
+</head>
+
+<body>
+
+    <div id="bannerimage"></div>
+
+    <div class="container-fluid">
+        <div class="row">
+          <div class="jumbotron">
+            <h1>Explore America's Natural Wonders with ParkFinder!</h1>
+            <p>Use the interactive charts below to explore America's National Parks</p>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div id="bar"></div>
+        </div>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="well">
+            <h5>National Park:</h5>
+            <select id="selDataset" onchange="optionChanged(this.value)"></select>
+          </div>
+          <div class="panel panel-success">
+            <div class="panel-heading">
+              <h3 class="panel-title">Park Info</h3>
+            </div>
+            <div id="sample-metadata" class="panel-body"></div>
+          </div>  
+        </div>
+        <div class="col-md-3">
+        <div class="panel panel-danger">
+          <div class="panel-heading">
+            <h3 class="panel-title">Park Alerts</h3>
+          </div>
+          <div id="sample-alertdata" class="panel-body"></div>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <div id="map" style="height: 800px"></div>
+    <div id="bar" style="height: 360px"></div>
+    <script src='statics/js/logic.js'></script>
+    <script src='statics/js/bar.js'></script>
+
+</body>
+
+</html>
